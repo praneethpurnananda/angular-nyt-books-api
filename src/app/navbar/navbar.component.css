@@ -1,0 +1,19 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.item{
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.item a{
+  text-decoration: none;
+}
+
+.main{
+  font-size: 23px;
+  margin-right: 1%;
+}

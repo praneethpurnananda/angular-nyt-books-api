@@ -1,0 +1,21 @@
+<div class="main" *ngIf="!isLoaded; else load">
+  <mat-list>
+  <div mat-subheader>Authors</div>
+  <mat-form-field class="example-full-width" style="margin-left: 1%">
+    <mat-label>Search author</mat-label>
+    <input matInput [(ngModel)]="name" (input)="searchauthor()">
+  </mat-form-field>
+  <div class="" *ngIf="authorsData.results" style="margin-left: 1%;">
+    Showing top <b>{{authorsData.results.length}}</b> results
+  </div><br>
+  <mat-list-item *ngFor="let info of authorsData.results">
+    <mat-icon mat-list-icon>account_circle</mat-icon>
+    <div mat-line>{{info.author}}</div>
+    <!-- <div mat-line>name</div> -->
+  </mat-list-item>
+  <mat-divider></mat-divider>
+</mat-list>
+</div>
+<ng-template #load>
+<app-preloader></app-preloader>
+</ng-template>
